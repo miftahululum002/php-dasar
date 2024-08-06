@@ -26,4 +26,10 @@ echo '</pre>';
 echo "Daftar Siswa<br>";
 foreach ($students as $s => $student) {
     echo 'Nama: ' . $student['name'] . ' umur:' . $student['age'] . ' alamat: ' . $student['address'] . '<br>';
+    echo "Hobi<br>";
+    echo "<ol>";
+    for ($i = 0; $i < count($student['hobbies']); $i++) {
+        echo "<li>" . $student['hobbies'][$i] . '</li>';
+    }
+    echo "</ol>";
 }
